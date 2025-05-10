@@ -14720,7 +14720,7 @@ function generateLocatorSearchSuggestions(query, locators) {
     font-size: 13px; /* Reduced from 14px */
   }
 }
-    
+
 /* No Results State */
 .no-results {
   text-align: center;
@@ -24893,6 +24893,149 @@ function generateSearchSuggestions(query, providers) {
   background: #000;
 }
 
+/* ===== Tablet (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .providers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    padding-bottom: 120px;
+  }
+
+  .provider-card {
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-carousel {
+    height: 180px;
+  }
+
+  .provider-card-content {
+    padding: 14px;
+  }
+
+  .provider-name {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .provider-category {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .info-item {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .info-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  .info-icon i {
+    font-size: 13px;
+  }
+
+  .info-label {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .info-value {
+    font-size: 12px;
+  }
+
+  .provider-description {
+    font-size: 13px;
+    margin: 10px 0;
+    -webkit-line-clamp: 2;
+  }
+
+  .tag {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .action-button {
+    padding: 12px 0;
+    font-size: 13px;
+  }
+}
+
+/* ===== Laptop & Desktop (1025px+) ===== */
+@media (min-width: 1025px) {
+  .providers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px;
+    padding-bottom: 140px;
+  }
+
+  .provider-card {
+    border-radius: 16px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .image-carousel {
+    height: 200px;
+  }
+
+  .provider-card-content {
+    padding: 16px;
+  }
+
+  .provider-name {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .provider-category {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .info-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .info-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  .info-icon i {
+    font-size: 14px;
+  }
+
+  .info-label {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .info-value {
+    font-size: 13px;
+  }
+
+  .provider-description {
+    font-size: 14px;
+    margin: 12px 0;
+    -webkit-line-clamp: 2;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .action-button {
+    padding: 14px 0;
+    font-size: 14px;
+  }
+}
   `;
   document.head.appendChild(style);
 }
