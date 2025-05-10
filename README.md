@@ -14649,66 +14649,78 @@ function generateLocatorSearchSuggestions(query, locators) {
   }
 }
 
+/* ===== Laptop & Desktop (1025px+) - Compact Version ===== */
 @media (min-width: 1025px) {
-  /* Laptop & Desktop styles */
   .locators-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Reduced from 340px */
+    gap: 16px; /* Reduced from 18px */
+    padding-bottom: 120px; /* Reduced from 140px */
   }
-  
+
   .locator-card {
-    border-radius: 15px;
+    border-radius: 14px; /* Slightly smaller radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
   }
-  
+
   .image-carousel {
-    height: 190px;
+    height: 180px; /* Reduced from 200px */
   }
-  
+
   .locator-card-content {
-    padding: 15px;
+    padding: 14px; /* Reduced from 16px */
   }
-  
+
   .locator-name {
-    font-size: 18px;
+    font-size: 16px; /* Reduced from 17px */
+    margin-bottom: 3px; /* Tighter spacing */
   }
-  
+
   .locator-category {
-    font-size: 14px;
+    font-size: 13px; /* Reduced from 14px */
+    margin-bottom: 6px; /* Tighter spacing */
   }
-  
+
   .info-item {
-    padding: 11px;
+    padding: 10px; /* Reduced from 12px */
+    gap: 8px; /* Reduced from 10px */
   }
-  
+
   .info-icon {
-    width: 30px;
-    height: 30px;
+    width: 28px; /* Reduced from 30px */
+    height: 28px;
+    border-radius: 6px; /* Smaller radius */
   }
-  
+
+  .info-icon i {
+    font-size: 13px; /* Reduced from 14px */
+  }
+
   .info-label {
-    font-size: 11px;
+    font-size: 10px; /* Reduced from 11px */
+    margin-bottom: 4px; /* Tighter spacing */
   }
-  
+
   .info-value {
-    font-size: 13px;
+    font-size: 12px; /* Reduced from 13px */
   }
-  
+
   .locator-description {
-    font-size: 14px;
-    margin: 11px 0;
+    font-size: 13px; /* Reduced from 14px */
+    margin: 10px 0; /* Tighter spacing */
+    -webkit-line-clamp: 2;
   }
-  
+
   .tag {
-    padding: 4px 9px;
-    font-size: 12px;
+    padding: 3px 8px; /* More compact */
+    font-size: 11px; /* Reduced from 12px */
   }
-  
+
   .action-button {
-    padding: 13px 0;
-    font-size: 14px;
+    padding: 12px 0; /* Reduced from 14px */
+    font-size: 13px; /* Reduced from 14px */
   }
 }
-  
+    
 /* No Results State */
 .no-results {
   text-align: center;
@@ -31566,7 +31578,7 @@ function openChatModal(contactId) {
   document.body.appendChild(modal);
 }
 
-// Initialize the chat interface 
+// Initialize the chat interface
 createChatInterface();
 
 function submitBookingViaWhatsApp() { const name = document.getElementById('nameInput').value.trim(); const contact = document.getElementById('contactInput').value.trim(); const address = document.getElementById('addressInput').value.trim(); const pincode = document.getElementById('pincodeInput').value.trim(); const date = document.getElementById('dateInput').value.trim(); const time = document.getElementById('timeInput').value.trim(); const bookingForm = document.getElementById('bookingForm'); const categoryId = bookingForm.dataset.categoryId || 'Not Specified'; const serviceName = bookingForm.dataset.serviceName || 'Not Specified'; const packageType = bookingForm.dataset.packageType || 'Not Specified'; if (!name || !contact) { showAlert('Please fill in Name and Contact Number', 'error'); return; } const message = `New Booking Request:\n📋 Category: ${categoryId}\n🛠 Service: ${serviceName}\n💎 Package: ${packageType}\n👤 Name: ${name}\n📞 Contact: ${contact}\n🏠 Address: ${address || 'Not Provided'}\n📍 Pincode: ${pincode || 'Not Provided'}\n📅 Date: ${date}\n⏰ Time: ${time}\n\nPlease confirm and process this booking.`; const encodedMessage = encodeURIComponent(message); const whatsappNumber = '78698 09022'; const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s/g, '')}?text=${encodedMessage}`; window.open(whatsappUrl, '_blank'); showBookingConfirmation(); } function showBookingConfirmation() { const confirmationModal = document.createElement('div'); confirmationModal.id = 'bookingConfirmation'; confirmationModal.className = 'modal-overlay'; confirmationModal.innerHTML = `<div class="modal-content"><div class="confirmation-icon"><i class="fas fa-check-circle"></i></div><h2>Booking Submitted!</h2><p>Your booking request has been sent to WhatsApp. Our team will contact you shortly.</p><button onclick="closeConfirmation()" class="action-button">Close</button></div>`; document.body.appendChild(confirmationModal); document.getElementById('bookingForm').reset(); } function closeConfirmation() { const confirmationModal = document.getElementById('bookingConfirmation'); if (confirmationModal) { confirmationModal.remove(); } } document.addEventListener('DOMContentLoaded', function() { const submitBookingButton = document.getElementById('submitBooking'); if (submitBookingButton) { submitBookingButton.addEventListener('click', submitBookingViaWhatsApp); } }); document.addEventListener('DOMContentLoaded', function() { const locationNav = document.querySelector('.nav-item[data-page="location"]'); if (locationNav) { locationNav.addEventListener('click', function(e) { e.preventDefault(); showCitiesOverlay(); }); } }); function showAlert(message, type = 'success') { const alert = document.createElement('div'); alert.className = `alert alert-${type}`; alert.textContent = message; document.body.appendChild(alert); setTimeout(() => { alert.remove(); }, 3000); } function setupEventListeners() { window.addEventListener('click', function(event) { if (event.target.classList.contains('modal-overlay')) { closePackageInfo(); closeBookingForm(); closeConfirmation(); } }); }
