@@ -20744,6 +20744,10 @@ function generatePlaceSearchSuggestions(query, places) {
     padding: 12px 0;
     font-size: 13px;
   }
+
+   .places-filter-container {
+   top: 72px;
+    }
 }
 
 /* ===== Laptop & Desktop (1025px+) ===== */
@@ -25230,7 +25234,12 @@ function generateSearchSuggestions(query, providers) {
     padding: 12px 0;
     font-size: 13px;
   }
+
+  .providers-filter-container {
+  top: 72px;
+  }
 }
+
 
 /* ===== Laptop & Desktop (1025px+) ===== */
 @media (min-width: 1025px) {
@@ -29584,6 +29593,10 @@ function generateRealEstateSearchSuggestions(query, properties) {
     padding: 12px 0;
     font-size: 13px;
   }
+
+  .real-estate-filter-container {
+   top: 72px;
+    }
 }
 
 /* ===== Laptop & Desktop (1025px+) ===== */
