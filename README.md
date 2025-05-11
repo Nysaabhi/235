@@ -20554,7 +20554,7 @@ function generatePlaceSearchSuggestions(query, places) {
 /* ===== Tablet (768px - 1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
   .places-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 16px;
     padding-bottom: 120px;
   }
