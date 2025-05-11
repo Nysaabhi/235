@@ -14765,6 +14765,10 @@ function generateLocatorSearchSuggestions(query, locators) {
     padding: 12px 0;
     font-size: 13px;
   }
+  
+  .locators-filter-container {
+   top: 72px;
+    }
 }
 
 /* ===== Laptop & Desktop (1025px+) - Compact Version ===== */
