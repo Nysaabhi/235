@@ -8331,6 +8331,92 @@ function showNysaFeedOverlay() {
         padding-bottom: 180px;
       }
     }
+
+    /* ===== Tablet (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nysa-feed-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 16px;
+    padding-bottom: 120px;
+  }
+
+  .nysa-feed-card {
+    border-radius: 12px;
+  }
+
+  .feed-card-image-container {
+    height: 300px;
+  }
+
+  .feed-card-header {
+    padding: 10px 14px;
+  }
+
+  .feed-provider-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feed-card-title {
+    font-size: 1.1em;
+  }
+
+  .feed-card-description {
+    font-size: 0.9em;
+  }
+
+  .feed-card-price {
+    font-size: 1em;
+  }
+
+  .feed-action-button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* ===== Laptop & Desktop (1025px+) ===== */
+@media (min-width: 1025px) {
+  .nysa-feed-grid {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 18px;
+    padding-bottom: 140px;
+  }
+
+  .nysa-feed-card {
+    border-radius: 14px;
+  }
+
+  .feed-card-image-container {
+    height: 320px;
+  }
+
+  .feed-card-header {
+    padding: 12px 16px;
+  }
+
+  .feed-provider-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feed-card-title {
+    font-size: 1.15em;
+  }
+
+  .feed-card-description {
+    font-size: 0.92em;
+  }
+
+  .feed-card-price {
+    font-size: 1.05em;
+  }
+
+  .feed-action-button {
+    padding: 7px 14px;
+    font-size: 0.92em;
+  }
+}
   `;
   document.head.appendChild(style);
 }
