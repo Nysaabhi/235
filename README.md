@@ -8311,7 +8311,7 @@ function showNysaFeedOverlay() {
       }
 
       #nysaFeedSearchInput {
-        height: 80px;
+        height: 70px;
         font-size: 1.05rem;
         padding: 0 50px 0 24px;
         border-radius: 16px;
@@ -8324,7 +8324,7 @@ function showNysaFeedOverlay() {
       }
 
       .voice-search i {
-        font-size: 2.1em;
+        font-size: 1.7em;
       }
 
       .nysa-feed-grid {
@@ -10293,7 +10293,7 @@ function showJobsOverlay() {
       }
 
       #jobsSearchInput {
-        height: 80px;
+        height: 70px;
         font-size: 1.05rem;
         padding: 0 50px 0 24px;
         border-radius: 16px;
@@ -10306,7 +10306,7 @@ function showJobsOverlay() {
       }
 
       .voice-search i {
-        font-size: 2.1em;
+        font-size: 1.7em;
       }
 
       .jobs-grid {
@@ -11946,7 +11946,7 @@ function showCouponOverlay() {
       }
 
       #couponSearchInput {
-        height: 80px;
+        height: 70px;
         font-size: 1.05rem;
         padding: 0 50px 0 24px;
         border-radius: 16px;
@@ -11959,7 +11959,7 @@ function showCouponOverlay() {
       }
 
       .voice-search i {
-        font-size: 2.1em;
+        font-size: 1.7em;
       }
 
       .coupon-grid {
@@ -14464,7 +14464,7 @@ function generateLocatorSearchSuggestions(query, locators) {
   }
 
   .voice-search i {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
 }
 
@@ -20355,7 +20355,7 @@ function generatePlaceSearchSuggestions(query, places) {
   }
 
   .voice-search i {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
 }
 
@@ -24854,7 +24854,7 @@ function generateSearchSuggestions(query, providers) {
   }
 
   .voice-search i {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
 }
 
@@ -29208,7 +29208,7 @@ function generateRealEstateSearchSuggestions(query, properties) {
   }
 
   .voice-search i {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
 }
 
