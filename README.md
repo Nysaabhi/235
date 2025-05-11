@@ -8375,49 +8375,81 @@ function showNysaFeedOverlay() {
   }
 }
 
-/* ===== Laptop & Desktop (1025px+) ===== */
+/* ===== Laptop & Desktop (1025px+) - Compact Version ===== */
 @media (min-width: 1025px) {
   .nysa-feed-grid {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 18px;
-    padding-bottom: 140px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    padding-bottom: 120px;
   }
 
   .nysa-feed-card {
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .feed-card-image-container {
-    height: 320px;
+    height: 240px;
   }
 
   .feed-card-header {
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 
   .feed-provider-avatar {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+
+  .feed-provider-name {
+    font-size: 0.9em;
+  }
+
+  .feed-meta-badges {
+    gap: 8px;
+  }
+
+  .time-badge,
+  .location-badge {
+    padding: 4px 10px;
+    font-size: 0.7em;
   }
 
   .feed-card-title {
-    font-size: 1.15em;
+    font-size: 1.05em;
+    margin-bottom: 6px;
   }
 
   .feed-card-description {
-    font-size: 0.92em;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 3;
   }
 
   .feed-card-price {
-    font-size: 1.05em;
+    font-size: 0.95em;
+  }
+
+  .feed-card-location {
+    font-size: 0.8em;
   }
 
   .feed-action-button {
-    padding: 7px 14px;
-    font-size: 0.92em;
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+
+  .feed-card-tags {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .feed-tag {
+    padding: 3px 8px;
+    font-size: 0.75em;
   }
 }
-  `;
+    `;
   document.head.appendChild(style);
 }
 
